@@ -14,11 +14,12 @@ hash[sorted]<<w;
 else
 hash[sorted]<<w;
 end
-puts "#{w} :sorts to: #{sorted} :entered as: #{hash[sorted]}\n"
+#puts "#{w} :sorts to: #{sorted} :entered as: #{hash[sorted]}\n"
 end
 
 #puts "The hash contains Keys: #{hash.keys} and Values: #{hash.values}\n"
-puts"#{hash.values}"
+#puts"#{hash.values}"
+return "#{hash.values}"
 end
 
 combine_anagrams(my_words)
