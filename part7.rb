@@ -3,16 +3,18 @@ class CartesianProduct
   attr_accessor :product
   attr_reader :seq1
   attr_reader :seq2
-  def initialize
+  def initialize(seq1,seq2)
     @seq1=seq1
+#puts "#{@seq1}"
     @seq2=seq2
+#    puts "#{@seq2}"
     @product=[]
   end
 
-  def each(seq1,seq2) 
+  def each
   @product=[]
   if(seq1.empty?||seq2.empty?)
-#puts "Debug: One of the sequences is empty!"  
+#  puts "Debug: One of the sequences is empty!"  
   return false
   else
   seq1.each do |s1|
@@ -21,15 +23,22 @@ class CartesianProduct
   end
   end
   end
-#puts "#{@product}"
-  return @product
+#  puts "#{product}"
+  return product
   end
 end
+
+c=CartesianProduct.new([:a,:b], [4,5])
+c.each { |elt| puts elt.inspect}
+
+c=CartesianProduct.new([:a,:b], [])
+c.each { |elt| puts elt.inspect}
+
 #test=CartesianProduct.new
 #my_s1=["a","b","c"]
 #my_s2=[4,5]
 #my_e=[]
-#my_sym=[':e',':f']
+#my_sym=[:e,:f]
 #my_s=['cat','dog']
 #test.each(my_s1,my_s2)
 #test.each(my_s2,my_e)
@@ -43,4 +52,3 @@ end
 #my_s3.each do |e|
 #  puts "#{e}"
 #  end
-
