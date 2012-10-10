@@ -24,7 +24,7 @@ end
 
 #puts "The hash contains Keys: #{hash.keys} and Values: #{hash.values}\n"
 #puts"#{hash.values}"
-return "#{hash.values}"
+return hash.values
 end
 
 #combine_anagrams(my_words)
