@@ -1,6 +1,11 @@
-my_words=['cars','for','four','potatoes','racs','Scar','creams','Scream']
+#my_words=['cars','for','four','potatoes','racs','Scar','creams','Scream']
+#empty_words=[]
+#cap_words=['CARS','FOR','SCAR']
 
 def combine_anagrams(words)
+
+#if (words.empty?)
+#return
 hash=Hash.new
 sorted=[]
 
@@ -22,4 +27,6 @@ end
 return "#{hash.values}"
 end
 
-combine_anagrams(my_words)
+#combine_anagrams(my_words)
+#combine_anagrams(empty_words)
+#combine_anagrams(cap_words)
