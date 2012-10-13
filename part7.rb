@@ -5,26 +5,20 @@ class CartesianProduct
   attr_reader :seq2
   def initialize(seq1,seq2)
     @seq1=seq1
-#puts "#{@seq1}"
     @seq2=seq2
-#    puts "#{@seq2}"
-    @product=[]
   end
-
   def each
   @product=[]
-  if(seq1.empty?||seq2.empty?)
-#  puts "Debug: One of the sequences is empty!"  
+  if(@seq1.empty?||@seq2.empty?)
   return false
   else
-  seq1.each do |s1|
-  seq2.each do |s2|
-  @product<< "#{s1.to_s},#{s2.to_s}"
+  @seq1.each do |s1|
+  @seq2.each do |s2|
+  @product<< [s1, s2]
   end
   end
   end
-#  puts "#{product}"
-  return product
+  return @product
   end
 end
 
