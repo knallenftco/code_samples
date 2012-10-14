@@ -18,31 +18,21 @@ class CartesianProduct
   end
   end
   end
-  return @product
+#puts "#{@product}"
+#return @product
+  @product.each {|elt| return elt.inspect}
   end
 end
 
-c=CartesianProduct.new([:a,:b], [4,5])
-c.each { |elt| puts elt.inspect}
-
-c=CartesianProduct.new([:a,:b], [])
-c.each { |elt| puts elt.inspect}
-
-#test=CartesianProduct.new
-#my_s1=["a","b","c"]
-#my_s2=[4,5]
-#my_e=[]
-#my_sym=[:e,:f]
-#my_s=['cat','dog']
-#test.each(my_s1,my_s2)
-#test.each(my_s2,my_e)
-#test.each(my_s2,my_s1)
-#test.each(my_s1,my_sym)
-#test.each(my_s2,my_s)
-
-#test2=Array.new
-#my_s3=["x","y","z"]
-#my_s4=[10,20]
-#my_s3.each do |e|
-#  puts "#{e}"
-#  end
+#c=CartesianProduct.new([:a,:b], [4,5])
+#c.each { |elt| puts elt.inspect}
+#
+#c=CartesianProduct.new([:a,:b], [])
+#c.each { |elt| puts elt.inspect}
+#
+#c=CartesianProduct.new([], [])
+#c.each { |elt| puts elt.inspect}
+#
+#c=CartesianProduct.new([:c,:d,:e], [1,2])
+#c.each { |elt| puts elt.inspect}
+#
