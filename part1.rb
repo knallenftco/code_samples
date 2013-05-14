@@ -7,6 +7,8 @@ end
 palindrome?("A man, a plan, a canal -- Panama")
 palindrome?("Madam, I'm Adam!")
 palindrome?("Abracadabra")
+
+
 def count_words(str)
 @word_hash=Hash.new()
 str.to_s.downcase.scan(/\w+/) do |w|
